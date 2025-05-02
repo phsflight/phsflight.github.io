@@ -1,0 +1,56 @@
+:root {
+    font-family: sans-serif;
+}
+
+* {
+    transition: all 0.2s;
+}
+
+body {
+    font-family: "Inter";
+    margin: 0;
+    background: black;
+    color: #eeeeee;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.nav-outer {
+    justify-content: space-between;
+}
+
+.top {
+    height: calc(100vh - 2em);
+    background: center/cover url("flight.jpg") no-repeat;
+    padding: 1em;
+}
+
+.page {
+    padding: 1em;
+}
+
+h1.massive {
+    margin: 0;
+    font-size: calc(min(5em, 20vmin));
+    font-weight: 800;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+@media screen and (max-width: 700px) {
+    #title-long {
+        display: none;
+    }
+}
