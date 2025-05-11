@@ -9,34 +9,67 @@
 body {
     font-family: "Inter";
     margin: 0;
-    background: black;
-    color: #eeeeee;
+    background: #eeeeee;
+    color: black;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-}
-
-.nav-outer {
-    justify-content: space-between;
-}
-
-.top {
-    height: calc(100vh - 2em);
-    background: center/cover url("flight.jpg") no-repeat;
+#top {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url("flight.jpg");
+    background-repeat: no-repeat;
     padding: 1em;
+
+    box-shadow: 0 -1em 10em black inset;
 }
 
-.page {
-    padding: 1em;
+#top-interior>div>a {
+    color: #6bafe7;
+}
+
+#top-interior {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding-bottom: 2em;
 }
 
 h1.massive {
-    margin: 0;
-    font-size: calc(min(5em, 20vmin));
+    font-size: 6rem;
     font-weight: 800;
+    margin: 0;
+}
+
+a {
+    color: #0060bf;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2rem);
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    background: #eeeeee;
+    border-bottom: #010101 solid 0.07em;
+    justify-content: space-between;
+}
+
+nav>div>img {
+    height: 3em;
+
+}
+
+nav.up {
+    top: -20%;
+}
+
+.page {
+    padding: 2em;
+    max-width: 80ch;
 }
 
 .flex {
@@ -49,8 +82,6 @@ h1.massive {
     flex-direction: row;
 }
 
-@media screen and (max-width: 700px) {
-    #title-long {
-        display: none;
-    }
+.flex.center {
+    justify-content: center;
 }
