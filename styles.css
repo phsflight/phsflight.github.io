@@ -7,6 +7,23 @@
     transition: all 0.2s;
 }
 
+/* Some base/default stuff */
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex.row {
+    flex-direction: row;
+}
+
+.flex.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* main stuff */
+
 body {
     font-family: "Inter";
     margin: 0;
@@ -72,14 +89,6 @@ footer {
     background-position: center;
 }
 
-#phs-img {
-    background-image: url("static/phs.png");
-}
-
-#eng-img {
-    background-image: url("static/engineering.jpg");
-}
-
 .lr-split {
     width: 100%;
     justify-content: space-between;
@@ -111,6 +120,7 @@ nav {
     border-bottom: #010101 solid 0.07em;
     justify-content: space-between;
     align-items: center;
+    z-index: 4;
 }
 
 nav>div {
@@ -191,17 +201,114 @@ nav.up {
     max-width: 80ch;
 }
 
-/* Some base/default stuff */
-.flex {
-    display: flex;
-    gap: 1rem;
+#phs-img {
+    background-image: url("static/phs.png");
 }
 
-.flex.row {
-    flex-direction: row;
+#eng-img {
+    background-image: url("static/engineering.jpg");
 }
 
-.flex.center {
+.pfp-img {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.pfp-img:hover {
+    background-color: #01010173;
+    background-blend-mode: multiply;
+    cursor: pointer;
+}
+
+#om {
+    background-image: url("static/team/om.jpeg");
+}
+
+#allan {
+    background-image: url("static/team/allan.jpeg");
+}
+
+#amil {
+    background-image: url("static/team/amil.jpeg");
+}
+
+#kona {
+    background-image: url("static/team/kona.jpeg");
+}
+
+#nicholas {
+    background-image: url("static/team/nicholas.jpeg");
+}
+
+#kasper {
+    background-image: url("static/team/kasper.jpeg");
+}
+
+#branden {
+    background-image: url("static/team/branden.jpeg");
+}
+
+.flex.wrap {
+    flex-wrap: wrap;
+}
+
+.flex.middle {
     justify-content: center;
-    align-items: center;
+}
+
+.member-info {
+    display: none;
+}
+
+.member-info.active {
+    display: block;
+}
+
+.pfp-img {
+    display: flex;
+    align-items: flex-end;
+}
+
+.pfp-img>h2 {
+    opacity: 0;
+    position: relative;
+    margin: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.pfp-img:hover>h2 {
+    opacity: 1;
+}
+
+.nav-arrow:hover {
+    cursor: pointer;
+    background: rgb(190, 190, 190);
+    box-shadow: 2px 2px 2px #00000071;
+}
+
+.nav-arrow {
+    background: rgb(217, 217, 217);
+    border-radius: 1rem;
+    font-size: 40px;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.member-name {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.member-container {
+    background: rgb(231, 231, 231);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
 }

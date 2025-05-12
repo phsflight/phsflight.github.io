@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title>PHS Flight</title>
+    <title>PHS Flight - Members</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back,arrow_forward" />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-    <link rel="icon" href="static/icon.svg">
 </head>
 
 <body>
@@ -29,37 +28,143 @@
     <div class="flex row center">
         <div class="page">
             <div class="group-pic-img big-img">
-                <h1>AMIL DHOOKIE</h1>
-                <i>Our great leader orz orz orz</i>
-            </div>
-            <h2>Capabilities</h2>
-            <div class="lr-split">
-                <p><b>ALLAN CHEN</b> is capable of autonomous flight, mapping, and object-detection for drop via
-                    advanced computational computer technology.
-                </p>
+                <h1>OUR TEAM</h1>
+                <i>The brilliant minds behind PHS Flight</i>
             </div>
 
-            <h2>Design Process</h2>
-            <div class="lr-split">
-                <div>Because of "the law", our head of manufacturing, <b>NICHOLAS KOPALIANI</b> orz orz orz orz
-                    designed, built, and operated a full-scale aluminum molding plant of epic proportions</div>
-                <div id="eng-img" class="med-img"></div>
+            <div class="flex row wrap middle">
+                <div class="pfp-img" id="amil" name="amil">
+                    <h2>Amil</h2>
+                </div>
+                <div class="pfp-img" id="allan" name="allan">
+                    <h2>Allan</h2>
+                </div>
+                <div class="pfp-img" id="nicholas" name="nicholas">
+                    <h2>Nicholas</h2>
+                </div>
+                <div class="pfp-img" id="kona" name="kona">
+                    <h2>Kona</h2>
+                </div>
+                <div class="pfp-img" id="branden" name="branden">
+                    <h2>Branden</h2>
+                </div>
+                <div class="pfp-img" id="om" name="om">
+                    <h2>Om</h2>
+                </div>
+                <div class="pfp-img" id="kasper" name="kasper">
+                    <h2>Kasper</h2>
+                </div>
             </div>
 
-            <h2>Design Gallery</h2>
-            <div>
-                <b>KONA MACALLISTER</b> flew the plane, did <i>so much</i> paperwork, and had dreams of a <b>fancy</b>
-                new aluminum structure.
-                <b>BRANDEN ZHOU</b> was tech support and helped a lot on everything.
-                <b>OM MEHTA</b> was tech support, made this website, and helped a bit on everyting.
-                <b>KASPER THOLENS</b> was there?
+            <div class="member-container" id="member-container">
+                <div class="flex middle">
+                    <span id="prev-member" class="nav-arrow material-symbols-outlined">arrow_back</span>
+                    <h2 class="member-name">Amil Dhookie</h2>
+                    <span id="next-member" class="nav-arrow material-symbols-outlined">arrow_forward</span>
+                </div>
+                <br>
+                <div class="member-info active" id="member-amil" name="amil">
+                    <span class="member-role">Our great leader orz orz orz</span>
+                    <p>Team leader who guided the project from conception to completion.</p>
+                </div>
+
+                <div class="member-info" id="member-allan" name="allan">
+                    <span class="member-role">Autonomous Systems</span>
+                    <p>Capable of autonomous flight, mapping, and object-detection for drop via advanced computational
+                        computer technology.</p>
+                </div>
+
+                <div class="member-info" id="member-nicholas" name="nicholas">
+                    <span class="member-role">Head of Manufacturing</span>
+                    <p>Because of "the law", our head of manufacturing designed, built, and operated a full-scale
+                        aluminum molding plant of epic proportions.</p>
+                </div>
+
+                <div class="member-info" id="member-kona" name="kona">
+                    <span class="member-role">Test Pilot</span>
+                    <p>Flew the plane, did <i>so much</i> paperwork, and had dreams of a <b>fancy</b> new aluminum
+                        structure.</p>
+                </div>
+
+                <div class="member-info" id="member-branden" name="branden">
+                    <span class="member-role">Tech Support</span>
+                    <p>Was tech support and helped a lot on everything.</p>
+                </div>
+
+                <div class="member-info" id="member-om" name="om">
+                    <span class="member-role">Tech Support & Web Developer</span>
+                    <p>Was tech support, made this website, and helped a bit on everything.</p>
+                </div>
+
+                <div class="member-info" id="member-kasper" name="kasper">
+                    <span class="member-role">Team Member</span>
+                    <p>Was there?</p>
+                </div>
             </div>
         </div>
     </div>
+
     <footer>
         <p>©PHSFlight 2025</p>
         <p>Made by <strong>Om Mehta</strong> and <strong>Kasper Tholens</strong></p>
     </footer>
+
+    <script>
+        const members = [
+            'amil', 'allan', 'nicholas', 'kona', 'branden', 'om', 'kasper'
+        ];
+        const names = [
+            "Amil Dhookie", "Allan Chen", "Nicholas Kopaliani", "Kona Macallister", "Branden Zhou", "Om Mehta", "Kasper Tholens"
+        ];
+        let currentMember = 0;
+
+        function showMember(index) {
+            document.querySelectorAll('.member-info').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelector(".member-name").innerText = names[index];
+            document.getElementById(`member-${members[index]}`).classList.add('active');
+        }
+
+        document.getElementById('prev-member').addEventListener('click', () => {
+            currentMember = (currentMember - 1 + members.length) % members.length;
+            showMember(currentMember);
+        });
+
+        document.getElementById('next-member').addEventListener('click', () => {
+            currentMember = (currentMember + 1) % members.length;
+            showMember(currentMember);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                currentMember = (currentMember - 1 + members.length) % members.length;
+                showMember(currentMember);
+            } else if (e.key === 'ArrowRight') {
+                currentMember = (currentMember + 1) % members.length;
+                showMember(currentMember);
+            }
+        });
+
+        let inverseMembers = new Map();
+        members.forEach((name, i) => { inverseMembers.set(name, i); })
+
+        function changeMember(name) {
+            currentMember = inverseMembers.get(name);
+            showMember(currentMember);
+            window.scrollTo({
+                top: 10000,
+                behavior: "smooth"
+            });
+
+        }
+
+        const membEls = document.getElementsByClassName("pfp-img");
+        for (const el of membEls) {
+            const name = el.getAttribute("name");
+            el.addEventListener("click", changeMember.bind(this, name));
+        }
+    </script>
 </body>
 
 </html>
