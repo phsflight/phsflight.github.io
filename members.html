@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>PHS Flight</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,35 +17,42 @@
 </head>
 
 <body>
-    <nav class="up flex row">
-        <div class="flex row">
+    <nav class="flex row stick">
+        <div class="flex row" id="logo-name" onclick="window.location='index.html'">
             <img src="static/icon.svg" />
             <h1 id="nav-title">PHS FLIGHT</h1>
         </div>
         <div class="flex row" id="nav-items">
             <a href="plane.html">The Plane</a>
-            <a href="media.html">Members</a>
-            <!-- <span id="search" class="material-symbols-outlined">
-                search </span> -->
         </div>
     </nav>
-    <div id="top">
-        <div id="top-interior">
-            <h1 class="massive">PHS Flight</h1>
-            <div class="flex row">
-                <a href="plane.html">[ the plane ]</a>
-                <a href="media.html">[ members ]</a>
-            </div>
-        </div>
-    </div>
     <div class="flex row center">
         <div class="page">
-            <h2>About Us</h2>
+            <div class="group-pic-img">
+                <h1>AMIL DHOOKIE</h1>
+                <i>Our great leader orz orz orz</i>
+            </div>
+            <h2>Capabilities</h2>
             <div class="flex row" id="about">
-                <p>We're a team of 7 high schoolers at Princeton High School, currently working to design,
-                    develop, build, and operate a new, custom unmanned aerial system.
+                <p><b>ALLAN CHEN</b> is capable of autonomous flight, mapping, and object-detection for drop via
+                    advanced computational computer technology.
                 </p>
-                <div id="phs-img"></div>
+            </div>
+
+            <h2>Design Process</h2>
+            <div class="flex row" id="design-proc-desc">
+                <div>Because of "the law", our head of manufacturing, <b>NICHOLAS KOPALIANI</b> orz orz orz orz
+                    designed, built, and operated a full-scale aluminum molding plant of epic proportions</div>
+                <div id="eng-img"></div>
+            </div>
+
+            <h2>Design Gallery</h2>
+            <div>
+                <b>KONA MACALLISTER</b> flew the plane, did <i>so much</i> paperwork, and had dreams of a <b>fancy</b>
+                new aluminum structure.
+                <b>BRANDEN ZHOU</b> was tech support and helped a lot on everything.
+                <b>OM MEHTA</b> was tech support, made this website, and helped a bit on everyting.
+                <b>KASPER THOLENS</b> was there?
             </div>
         </div>
     </div>

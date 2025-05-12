@@ -1,5 +1,6 @@
 :root {
     font-family: sans-serif;
+    font-size: 20px;
 }
 
 * {
@@ -18,7 +19,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: url("flight.jpg");
+    background-image: url("static/flight.jpg");
     background-repeat: no-repeat;
     padding: 1em;
 
@@ -26,7 +27,18 @@ body {
 }
 
 #top-interior>div>a {
-    color: #6bafe7;
+    color: #abcaff;
+    text-decoration: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    text-shadow: 0 0 0.5em black;
+    /* overflow: none; */
+}
+
+#top-interior>div>a:hover {
+    text-shadow: 0 0 1em black;
+    backdrop-filter: blur(1em);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #top-interior {
@@ -37,9 +49,61 @@ body {
 }
 
 h1.massive {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 800;
     margin: 0;
+}
+
+footer {
+    background: lightgray;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#phs-img {
+    background-image: url("static/phs.png");
+    width: 350px;
+    min-width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+#eng-img {
+    background-image: url("static/engineering.jpg");
+    width: 350px;
+    min-width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+#about {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#design-proc-desc {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#design-proc-desc {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#about-text {
+    display: block;
+}
+
+#design-proc-desc-text {
+    display: block;
 }
 
 a {
@@ -56,11 +120,99 @@ nav {
     background: #eeeeee;
     border-bottom: #010101 solid 0.07em;
     justify-content: space-between;
+    align-items: center;
+}
+
+nav>div {
+    align-items: center;
+}
+
+nav.stick {
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+
+#logo-name:hover {
+    cursor: pointer;
+}
+
+.plane-img {
+    background-image: url("static/plane.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.group-pic-img {
+    background-image: url("static/plane.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.plane-img>h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.group-pic-img>h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.plane-img>i {
+    font-size: 0.75em;
+    color: rgb(57, 57, 57);
+}
+
+.group-pic-img>i {
+    font-size: 0.75em;
+    color: rgb(57, 57, 57);
+}
+
+@media screen and (max-width:600px) {
+    :root {
+        font-size: 20px;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #design-proc-desc {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #phs-img {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+
+    #eng-img {
+        width: 100%;
+        min-width: none;
+        max-width: none;
+    }
+
+    #nav-title {
+        display: none;
+    }
+}
+
+#nav-items {
+    align-items: center;
 }
 
 nav>div>img {
     height: 3em;
-
 }
 
 nav.up {
@@ -75,7 +227,6 @@ nav.up {
 .flex {
     display: flex;
     gap: 1rem;
-    align-items: center;
 }
 
 .flex.row {
@@ -84,4 +235,5 @@ nav.up {
 
 .flex.center {
     justify-content: center;
+    align-items: center;
 }
