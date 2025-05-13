@@ -60,7 +60,7 @@
         </div>
     </div>
     <script>
-        for (const el of document.images) {
+        for (const el of document.all) {
             el.classList.add("hidden");
             el.addEventListener("load", () => { el.classList.remove("hidden"); })
         }

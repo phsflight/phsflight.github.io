@@ -180,7 +180,7 @@
             el.addEventListener("click", changeMember.bind(this, name));
         }
 
-        for (const el of document.images) {
+        for (const el of document.all) {
             el.classList.add("hidden");
             el.addEventListener("load", () => { el.classList.remove("hidden"); })
         }
