@@ -16,7 +16,8 @@
     <link rel="icon" href="static/icon.svg">
 </head>
 
-<body>
+<body class="loading">
+    <script> document.addEventListener("DOMContentLoaded", () => { setTimeout(() => { document.body.classList.remove("loading") }, 100) }) </script>
     <nav class="flex row stick">
         <div class="flex row" id="logo-name" onclick="window.location='index.html'">
             <img src="static/icon.svg" />
