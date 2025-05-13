@@ -119,6 +119,11 @@ footer {
 
 a {
     color: #0060bf;
+    text-decoration: underline #00000000;
+}
+
+a:hover {
+    text-decoration: underline #0060bf;
 }
 
 nav {
