@@ -59,6 +59,12 @@
                 webkitallowfullscreen="true"></iframe>
         </div>
     </div>
+    <script>
+        for (const el of document.images) {
+            el.classList.add("hidden");
+            el.addEventListener("load", () => { el.classList.remove("hidden"); })
+        }
+    </script>
     <footer>
         <p>©PHSFlight 2025</p>
         <p>Made by <strong>Om Mehta</strong> and <strong>Kasper Tholens</strong></p>
