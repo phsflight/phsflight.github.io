@@ -330,3 +330,7 @@ nav.up {
     color: #444;
     font-size: 0.75rem;
 }
+
+.hidden {
+    opacity: 0;
+}
