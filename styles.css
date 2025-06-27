@@ -45,14 +45,21 @@ body.loading>* {
 
 #top {
     height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: url("static/flight.jpg");
-    background-repeat: no-repeat;
     padding: 1em;
+    background: linear-gradient(transparent 60%, #0005 80%, #000a 100%);
+    box-sizing: border-box;
+}
 
-    box-shadow: 0 -1em 10em black inset;
+#top::before {
+    content: "";
+    position: absolute;
+    background: center/cover url("static/flight.jpg") no-repeat fixed;
+    inset: 0;
+    z-index: -10000;
+}
+
+#outer-page {
+    background: #eee;
 }
 
 #top-interior>div>a {
@@ -338,4 +345,8 @@ nav.up {
 
 .hidden {
     opacity: 0;
+}
+
+iframe {
+    border: none;
 }
