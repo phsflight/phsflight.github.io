@@ -20,11 +20,11 @@
 <body>
     <script> document.addEventListener("DOMContentLoaded", () => { setTimeout(() => { document.body.classList.remove("loading") }, 100) }) </script>
     <nav class="up flex row">
-        <div class="flex row">
+        <div>
             <img src="static/icon.svg" />
             <h1 id="nav-title">PHS FLIGHT</h1>
         </div>
-        <div class="flex row" id="nav-items">
+        <div id="nav-items">
             <a href="plane.html">The Plane</a>
             <a href="members.html">Members</a>
         </div>
@@ -38,36 +38,31 @@
             </div>
         </div>
     </div>
-    <div class="flex row center" id="outer-page">
-        <div class="page">
-            <h2>About Us</h2>
-            <div class="lr-split" id="about">
-                <p>We're a team of 7 high schoolers at Princeton High School, currently working to design,
-                    develop, build, and operate a new, custom unmanned aerial system.
-                </p>
-                <div id="phs-img" class="med-img"></div>
-            </div>
-            <h2>Flight Readiness</h2>
-            <p>
-                PHSFlight's SUAS division (Princeton Tigers) has been developing their plane, SUASERv1, for months.
-                After a long design and development process, SUASER is able to undertake automated takeoff, landing, and
-                flight, with a reliable safety override for skilled manual pilots to take control at any point in the
-                flight.
+    <div class="page">
+        <h2>About Us</h2>
+        <div class="lr-split" id="about">
+            <p>We're a team of 7 high schoolers at Princeton High School, currently working to design,
+                develop, build, and operate a new, custom unmanned aerial system.
             </p>
-            <iframe src="https://drive.google.com/file/d/" height="700" width="100%" allow="autoplay"></iframe>
-            <div class="flex row">
-                <a href="https://drive.google.com/file/d/" target="_blank"><span
-                        style="font-size:1rem; font-weight:500;" class="material-symbols-outlined">
-                        open_in_new
-                    </span>Open Flight Readiness Video</a>
-            </div>
-            <div class="flex row">
-                <a href="https://docs.google.com/document/d/1YgyrQIu22YOo_ygREexEKrUe0sGxU7XhNaxunJfoMqU"
-                    target="_blank"><span style="font-size:1rem; font-weight:500;" class="material-symbols-outlined">
-                        description
-                    </span>View our Techical Design Report</a>
-            </div>
+            <img id="phs-img" src="static/phs.png" alt="A picture of Princeton High School" />
         </div>
+        <h2>Flight Readiness</h2>
+        <p>
+            PHSFlight's SUAS division (Princeton Tigers) has been developing their plane, SUASERv1, for months.
+            After a long design and development process, SUASER is able to undertake automated takeoff, landing, and
+            flight, with a reliable safety override for skilled manual pilots to take control at any point in the
+            flight.
+        </p>
+        <iframe src="https://drive.google.com/file/d/" height="700" width="100%" allow="autoplay"></iframe>
+        <a href="https://drive.google.com/file/d/" target="_blank"><span style="font-size:1rem; font-weight:500;"
+                class="material-symbols-outlined">
+                open_in_new
+            </span>Open Flight Readiness Video</a>
+        <br>
+        <a href="https://docs.google.com/document/d/1YgyrQIu22YOo_ygREexEKrUe0sGxU7XhNaxunJfoMqU" target="_blank"><span
+                style="font-size:1rem; font-weight:500;" class="material-symbols-outlined">
+                description
+            </span>View our Techical Design Report</a>
     </div>
     <script>
         for (const el of document.images) {
