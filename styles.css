@@ -59,6 +59,13 @@ body.loading>* {
     z-index: -10000;
 }
 
+@media screen and (max-width:500px) {
+    #top::before {
+        background-size: 100svh;
+        background-position: -50svw 0;
+    }
+}
+
 #outer-page {
     background: #eee;
 }
