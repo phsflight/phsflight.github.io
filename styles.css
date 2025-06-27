@@ -54,7 +54,7 @@ body.loading>* {
     content: "";
     position: absolute;
     background: url("static/flight.jpg") no-repeat;
-    background-size: cover;
+    background-size: 10%;
     background-position: 50% 50%;
     inset: 0;
     z-index: -10000;
