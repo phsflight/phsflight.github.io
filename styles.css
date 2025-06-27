@@ -61,7 +61,7 @@ body.loading>* {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: center;
     z-index: -2;
 }
 
