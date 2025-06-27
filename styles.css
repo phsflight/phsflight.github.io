@@ -233,7 +233,7 @@ nav.up {
 #phs-img {
     /* background-image: url("static/phs.png"); */
 
-    width: 350px;
+    max-width: 350px;
     min-width: 300px;
     height: 200px;
     object-fit: cover;
