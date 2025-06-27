@@ -34,7 +34,7 @@ body {
 body.loading {
     background-image: url("static/loading.svg");
     /* background-size: 100% 100%; */
-    background-size: calc(100vh - 2rem);
+    background-size: calc(100svh - 2rem);
     background-position: center 1rem;
     background-repeat: no-repeat;
 }
@@ -44,7 +44,7 @@ body.loading>* {
 }
 
 #top {
-    height: 100vh;
+    height: 100svh;
     padding: 1em;
     background: linear-gradient(transparent 60%, #0005 80%, #000a 100%);
     box-sizing: border-box;
