@@ -216,8 +216,12 @@ nav>div>img {
     height: 3em;
 }
 
+nav {
+    transition: top .5s;
+}
+
 nav.up {
-    top: -20%;
+    top: -40%;
 }
 
 .page {
