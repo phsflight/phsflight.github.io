@@ -55,16 +55,19 @@ body.loading>* {
     position: absolute;
     background: center/cover url("static/flight.jpg") no-repeat;
     background-attachment: fixed;
+    background-size: 100svh;
+    background-position: 50% 50%;
     inset: 0;
     z-index: -10000;
 }
 
+/* 
 @media screen and (max-width:500px) {
     #top::before {
         background-size: 100svh;
-        background-position: -50svw 0;
+        background-position: 50% 50%;
     }
-}
+} */
 
 #outer-page {
     background: #eee;
