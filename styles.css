@@ -53,12 +53,16 @@ body.loading>* {
 #top::before {
     content: "";
     position: absolute;
-    background: center/cover url("static/flight.jpg") no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("static/flight.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100vmax;
+    background-size: cover;
     background-position: 50% 50%;
-    inset: 0;
-    z-index: -10000;
+    z-index: -2;
 }
 
 /* 
